@@ -1,6 +1,3 @@
-Here's a simple and clear README for your GitHub repository:
-
----
 
 # Filomsi - Movie App with AI Recommendations
 
@@ -62,6 +59,4 @@ Filomsi is a movie discovery app built with React.js for the frontend and Fireba
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
-Make sure to update the GitHub URL and Firebase/OpenAI setup steps according to your project. This README will help other developers understand your app and get it running easily!
