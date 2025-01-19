@@ -1,42 +1,70 @@
+
 # Fimosi Movie Web App
 
-**Fimosi** is a movie recommendation web app that uses AI-powered recommendations to suggest movies based on user preferences. The app is built with **React.js** for the frontend and **Firebase** for the backend.
+**Fimosi** is a movie recommendation app built with the **MERN stack** (MongoDB, Express, React, Node.js). It provides AI-based movie recommendations and allows users to sign up, log in, and store their preferences.
 
 ---
 
 ## Features
 
-- **AI-based Movie Recommendations**: Get movie suggestions based on user input.
-- **User Authentication**: Sign up and sign in using **Firebase Authentication**.
-- **Firestore Database**: Store and manage user preferences and movie data.
-- **Responsive Design**: Optimized for both desktop and mobile screens using **Tailwind CSS**.
+- AI-powered movie recommendations
+- User authentication (JWT)
+- Responsive design with Tailwind CSS
 
 ---
 
 ## Technologies Used
 
-- **Frontend**:
-  - React.js
-  - Tailwind CSS
-  - Vite for development
-  - Firebase SDK
-- **Backend**:
-  - Firebase Authentication
-  - Firebase Firestore
-  - Firebase Hosting (optional)
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
 
 ---
 
 ## Getting Started
-
-To get a local copy of the project up and running, follow these simple steps:
-
-### Prerequisites
-
-Make sure you have **Node.js** installed. If not, download it from [Node.js](https://nodejs.org/).
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/filmosi.git
 cd filmosi
+```
+
+### 2. Backend Setup
+
+- Go to the `backend` folder and install dependencies:
+
+```bash
+cd backend
+npm install
+```
+
+- Create a `.env` file for environment variables (e.g., MongoDB connection string).
+
+- Start the backend server:
+
+```bash
+npm start
+```
+
+### 3. Frontend Setup
+
+- Go to the `frontend` folder and install dependencies:
+
+```bash
+cd frontend
+npm install
+```
+
+- Start the frontend server:
+
+```bash
+npm run dev
+```
+
+---
+
+## License
+
+MIT License
+
