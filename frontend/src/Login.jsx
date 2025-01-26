@@ -11,8 +11,15 @@ function Login() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
+
+
     >
-      
+
+      <nav className="w-full bg-gray-800 bg-opacity-70 p-4 fixed top-0 left-0">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-4xl text-red-600 font-extrabold">FILMOSI</h1>
+        </div>
+      </nav>
       <div className="bg-gray-800 bg-opacity-70 p-10 rounded-lg shadow-lg w-96">
         <h1 className="text-4xl text-red-600 font-extrabold mb-6 text-center">Login</h1>
         <input
@@ -30,11 +37,12 @@ function Login() {
         </button>
         <div className="text-center">
           <a href="Register.jsx" className="text-sm text-gray-400 hover:underline">
-            Don't have an account? 
+            Don't have an account?
           </a>
         </div>
       </div>
     </div>
+
   );
 }
 
