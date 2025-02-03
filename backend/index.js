@@ -1,11 +1,12 @@
-import express from "express"
-import mongoose from "mongoose"
-const app = express()
+const express = require("express");
+const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello world")
-})
+// Add this route!
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-app.listen(3000,()=>{
-    console.log("Conneted Sucessfully")
-})
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
