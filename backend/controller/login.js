@@ -5,8 +5,17 @@ const app = express()
 app.post("/login", async (req, res) => {
     try{
         const { email, password} = req.body
+        const result = await login(email, password);
+        
+        if(result){
+            res.send("Login Sucessfully");
+
+        }
+        else{
+            res.send("Login Failed")}
     }
-    catch{}
+    catch{console.error("Error in login");
+    }
     
 
 });

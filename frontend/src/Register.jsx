@@ -1,5 +1,7 @@
 import React from "react";
 import coverImage from './assets/coverpagee.jpg';
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
 function Register() {
   return (
@@ -60,12 +62,9 @@ function Register() {
 
         
         <div className="mt-6 text-center">
-          <a
-            href="/login"
-            className="text-sm text-gray-400 hover:text-red-500 transition-colors underline"
-          >
-            Already have an account?
-          </a>
+          <a href="login">
+            Already have an account? Login
+            </a>
         </div>
       </div>
     </div>
