@@ -22,7 +22,7 @@ export const Ai = () => {
               {
                 parts: [
                   {
-                    text: `A user is describing a movie but forgot the name. The description: "${search}". Your task is to identify the most likely movie name and release year. Do not provide disclaimers. Just give the movie title and year and description about the movie.`,
+                    text: `A user is describing a movie but forgot the name. The description: "${search}". Your task is to identify the most likely movie name and release year. Do not provide disclaimers. Just give the movie title and year and description about the movie and give them more than one recommendation and remove the astrics.`,
                   },
                 ],
               },
@@ -36,7 +36,9 @@ export const Ai = () => {
         data?.candidates?.[0]?.content?.parts?.[0]?.text ||
         "No recommendations found.";
 
-      setMovies(aiResponse.split("\n")); // Convert response into an array
+      setMovies(aiResponse.split("\n")); 
+      setSearch("");
+      document.getElementById("AiSearch").value = "";
     } catch (error) {
       console.error("Error fetching AI response:", error);
       setMovies(["Failed to get recommendations. Try again!"]);
@@ -47,24 +49,26 @@ export const Ai = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       {/* Title with gradient */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-6">
-        Filmosi AI{" "}
-        <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-          Movie
-        </span>{" "}
-        Recommendation
-      </h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-8 text-center text-white drop-shadow-lg">
+  Filmosi AI{" "}
+  <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent glow-effect">
+    Movie
+  </span>{" "}
+  Recommendation
+</h1>
+
 
       {/* Search bar container */}
-      <div className="relative w-full max-w-xl">
+      <div className="flex w-full max-w-xl">
         <input
           type="text"
-          placeholder="What kind of movie are you feeling today? 🎬"
-          className="w-full p-4 rounded-full bg-gray-800 text-white shadow-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-purple-500 transition-all"
+          placeholder="Describe the movie... 🎬"
+          id="AiSearch"
+          className="flex-grow p-4 rounded-l-full bg-gray-800 text-white shadow-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-purple-500 transition-all"
           onChange={(e) => setSearch(e.target.value)}
         />
         <button
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold hover:scale-105 transition-all"
+          className="px-6 py-3 rounded-r-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold hover:scale-105 transition-all"
           onClick={handleSearch}
         >
           Search
